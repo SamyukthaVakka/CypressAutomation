@@ -1,0 +1,26 @@
+{
+  "name": "cypressautomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules\\.bin\\cypress run",
+    "cypress:open": "cypress open",
+    "headTest": "npm run test -- --headed",
+    "chromeTest": "npm run test -- --browser chrome",
+    "recordDashboardTest": "npm run test --record --key 2e04155a-be76-4c0d-af3e-294ef05df54 --reporter mochawesome",
+    "MobileKartTest": "npm run test -- --spec \"cypress//integration//MobileKart/*\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^7.4.0",
+    "cypress-cucumber-preprocessor": "^4.1.1",
+    "cypress-iframe": "^1.0.1",
+    "mocha": "^5.2.0",
+    "mochawesome": "^6.2.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}
